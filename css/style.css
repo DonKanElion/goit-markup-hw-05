@@ -17,7 +17,6 @@
 
 a,
 ul {
-  margin-top: 0;
   margin-bottom: 0px;
   padding-left: 0px;
   list-style: none;
@@ -85,17 +84,15 @@ body {
 
 .logo-link {
   margin-right: 93px;
-}
-
-.logo {
   color: var(--accent-color);
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway",
+  sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
 }
 
-.logo:last-child {
+.logo {
   color: var(--title-text-color);
 }
 
@@ -105,6 +102,7 @@ body {
 }
 
 .link-nav {
+  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -335,7 +333,10 @@ body {
 .team-photo {
   width: 270px;
   height: 260px;
-  margin-bottom: var(--mb);
+}
+
+.team-box{
+  padding: 30px 32px;
 }
 
 .team-list .item {
@@ -375,10 +376,7 @@ body {
 .social-list {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 30px;
-  padding-left: 32px;
-  padding-right: 32px;
-}
+  }
 
 .social-list-item {
   margin-right: 10px;
@@ -552,11 +550,13 @@ body {
 
 /*========= END Footer =========*/
 /* ======== PORTFOLIO =========*/
+
 .portfolio {
   padding-top: 94px;
   padding-bottom: 94px;
   background-color: var(--primery-white-color);
 }
+
 .filters {
   display: flex;
   justify-content: center;
@@ -610,13 +610,17 @@ body {
 .projects > .item {
   width: 370px;
   margin-right: var(--mr);
-  margin-bottom: var(--mb);
-
-  border: 1px solid transparent;
+  margin-bottom: var(--mb);  
 }
 
-.projects > .item:hover,
-.projects > .item:focus {
+.project-link{
+  display: block;
+  border: 1px solid transparent;
+
+}
+
+.project-link:hover,
+.project-link:focus {
   border: 1px solid var(--primery-white-color);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
