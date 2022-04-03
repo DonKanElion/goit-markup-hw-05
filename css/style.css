@@ -85,8 +85,7 @@ body {
 .logo-link {
   margin-right: 93px;
   color: var(--accent-color);
-  font-family: "Raleway",
-  sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
@@ -163,11 +162,8 @@ body {
   padding-bottom: 200px;
 
   background-color: rgba(47, 48, 58, 0.4);
-  background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url("../images/hero.jpeg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/hero.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -310,11 +306,33 @@ body {
 }
 
 .working-list .item {
+  position: relative;
   margin-right: var(--mr);
 }
 
-.working-list .item:last-child {
+.working-list > .item:last-child {
   margin-right: 0;
+}
+
+.working-list .item > p {
+  position: absolute;
+  bottom: 0;
+
+  /* display: flex;
+  justify-content: center; */
+
+  width: 370px;
+  height: 70px;
+  padding: 27px 0;
+
+  background-color: rgba(47, 48, 58, 0.8);
+  color: var(--primery-white-color);
+  font-weight: 700;
+  line-height: 1.14;
+  /* border: 1px solid #000000; */
+  text-shadow: 1px 2px 4px #000000;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 /* ========= END Working =========*/
@@ -335,7 +353,7 @@ body {
   height: 260px;
 }
 
-.team-box{
+.team-box {
   padding: 30px 32px;
 }
 
@@ -348,7 +366,6 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-
   background-color: var(--primery-white-color);
 }
 
@@ -376,7 +393,7 @@ body {
 .social-list {
   display: flex;
   justify-content: space-between;
-  }
+}
 
 .social-list-item {
   margin-right: 10px;
@@ -610,13 +627,12 @@ body {
 .projects > .item {
   width: 370px;
   margin-right: var(--mr);
-  margin-bottom: var(--mb);  
+  margin-bottom: var(--mb);
 }
 
-.project-link{
+.project-link {
   display: block;
   border: 1px solid transparent;
-
 }
 
 .project-link:hover,
@@ -624,6 +640,36 @@ body {
   border: 1px solid var(--primery-white-color);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.project-overlay-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-overlay-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  transform: translatey(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  padding: 62px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  color: var(--primery-white-color);
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.project-link:hover .project-overlay-text {
+  transform: translatex(0);
 }
 
 .projects .item:nth-child(3n) {
