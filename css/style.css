@@ -59,6 +59,7 @@ body {
 .link {
   color: var(--title-text-color);
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 .container {
@@ -109,6 +110,8 @@ body {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 .menu .item,
@@ -137,7 +140,21 @@ body {
 }
 
 .current {
+  position: relative;
   color: var(--accent-color);
+  }
+
+.current::after{
+  position: absolute;
+  top: 100%;
+  right: 100%;
+  transform: translate(100%);
+
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
 }
 
 .link:hover,
@@ -210,6 +227,8 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
+  
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 .hero .button:hover {
@@ -413,6 +432,8 @@ body {
 
   fill: var(--fill-icon);
   border-radius: 50%;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, fill 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 .social-list-link:hover,
@@ -470,6 +491,7 @@ body {
   height: 100%;
 
   fill: var(--fill-icon);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, fill 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 .customer-list-item:hover,
@@ -600,6 +622,8 @@ body {
   font-size: 16px;
   line-height: 1.62;
   cursor: pointer;
+  
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 .filter:hover,
@@ -633,6 +657,8 @@ body {
 .project-link {
   display: block;
   border: 1px solid transparent;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 .project-link:hover,
@@ -656,7 +682,7 @@ body {
   overflow: auto;
 
   transform: translatey(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 
   padding: 62px 24px;
   background-color: rgba(33, 150, 243, 0.9);
